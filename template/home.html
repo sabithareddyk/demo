@@ -1,0 +1,40 @@
+{% load static from staticfiles %}
+<html>
+<head>
+<title>...:::: Home - Django ERKS </title>
+<style>
+td{
+	font-face:'verdana';
+	font-size: 20px;
+	color:brown;
+}
+</style>
+</head>
+<body background="{% static 'resources/images/backg.jpg' %}">
+<table width="100%">
+
+<tr border='1'>
+<td >M: +919999999999 | feedback@mydjangosite.com</td>
+<td align="right"><a href='/mainpage/'><img src="{% static 'resources/images/home.jpg' %}" height="40" width="40"></a>
+<a href='/aboutus/'>About Us</a> |<a href='/contactus/'> Contact Us </a></td>
+</tr>
+<tr>
+<td colspan="2"><img src="{% static 'resources/images/banner.jpg' %}" height="200" width="100%"></td>
+</tr>
+</table>
+<a href='/mainpage/'><img src="{% static 'resources/images/Home.png' %}" width="100" height="30"></a>
+<a href='/newemp/'><img src="{% static 'resources/images/newemp.png' %}"></a>
+<a href='/showemp/'><img src="{% static 'resources/images/showemp.png' %}"></a>
+<a href='/searchemp/'><img src="{% static 'resources/images/searchemp.png' %}"></a>
+<a href='/editemp/'><img src="{% static 'resources/images/editemployee.png' %}"></a>
+<a href='/deleteemp/'><img src="{% static 'resources/images/deleteemp.png' %}"></a>
+<p align="right"><img src="{% static 'resources/images/developer.jpg' %}" height="300" width="400"></p>
+<br>
+<br>
+<table width="100%">
+<tr>
+<td align="center" bgcolor='black'> <font color='white'>&copy; All rights reserved to : python4csip.com </font></td>
+</tr>
+</table>
+</body>
+</html>

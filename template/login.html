@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>.....::::: Authenticate yourself </title>
+<script>
+function checkit()
+{
+	var user = document.login.user.value;
+	if(user.length==0)
+	{
+		alert("User name cannot be left blank ");
+		return false;
+	}
+	var p = document.login.pass.value;
+	if(p.length==0)
+	{
+		alert("Password Cannot be left blank")
+		return false;
+	}
+	if(p.length<8)
+	{
+		alert("Password cannot be <=8 characters")
+		return false;
+	}
+}
+</script>
+<body>
+<form method="POST" action="#" name="login">
+{% csrf_token %}
+<table border="2" align="center" bgcolor="cyan">
+<tr>
+<td colspan="2"> EMPLOYEE LOGIN WINDOW </td>
+</tr>
+<tr>
+<td> USER NAME </td>
+<td> <input type="text" name="user"> </td>
+</tr>
+<tr>
+<td> PASSWORD </td>
+<td> <input type="password" name="pass"></td>
+</tr>
+<tr>
+<td><input type="submit" value="Login" onclick="return checkit()"></td>
+<td><input type="reset" value="Cancel"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
